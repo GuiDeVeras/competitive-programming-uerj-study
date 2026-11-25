@@ -7,23 +7,14 @@ int main() {
 	int n;
 	cin >> n;
 	
-	vector<vector<int>> mat (n, vector<int> (n, 0));
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+
 	
 	for (int i = 0; i < n; i++) {
-		mat[0][i] = i;
-		mat[i][0] = i;
-	}
-	for (int i = 1; i < n; i++) {
-		for (int j = 1; j < n; j++) mat[i][j] = i xor j;
-	}
-	
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < n; j++) {
-			cout << mat[i][j] << " ";
-		}
+		for (int j = 0; j < n; j++) cout << (i xor j) << " ";
 		cout << "\n";
 	}
-	
 	
 	return 0;
 
